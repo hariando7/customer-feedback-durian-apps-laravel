@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\FeedbackController;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +14,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/feedback-create', function () {
+//     return view('feedback.create');
+// });
+Route::get('/', [FeedbackController::class, 'create'])->name('feedback.create');
+Route::get('/feedback-detail', [FeedbackController::class, 'index'])->name('feedback.index');
+Route::get('/feedback-detail/{id}', [FeedbackController::class, 'show'])->name('feedback.show');
+Route::post('/feedback-detail', [FeedbackController::class, 'store'])->name('feedback.store');
