@@ -108,7 +108,7 @@
                         </div>
                     </div>
 
-                    {{-- Scoring Details Section --}}
+                    {{-- Score Section --}}
                     @php
                         $scores = [
                             'color' => 'Warna',
@@ -207,7 +207,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Mobile optimizations */
+        /* Mobile layout */
         @media (max-width: 640px) {
             body {
                 font-size: 0.9375rem;

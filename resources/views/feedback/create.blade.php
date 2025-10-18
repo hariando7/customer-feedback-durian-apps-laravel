@@ -269,7 +269,7 @@
             </div>
         @endif
 
-        {{-- Info Box --}}
+        {{-- Penilaian --}}
         <div class="info-box rounded-xl p-3 sm:p-4 mb-4 sm:mb-6 text-sm sm:text-base">
             <div class="flex gap-2 sm:gap-3 mb-2 sm:mb-3">
                 <svg class="w-4 h-4 sm:w-5 sm:h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -310,12 +310,12 @@
                 </div>
             </div>
 
-            {{-- Scanner Box --}}
+            {{-- Kamera --}}
             <div id="qr-reader" class="scanner-box hidden rounded-lg p-4 flex items-center justify-center min-h-80 sm:min-h-96 text-sm">
                 <p class="text-gray-600 font-medium">Kamera akan muncul di sini...</p>
             </div>
 
-            {{-- Nama Panelis --}}
+            {{-- Nama --}}
             <div>
                 <label class="label-styling block mb-2 sm:mb-3 flex items-center gap-2 text-sm sm:text-base">
                     <svg class="w-4 h-4 sm:w-5 sm:h-5 text-yellow-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -329,7 +329,7 @@
                     class="input-field w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg bg-gray-50 placeholder-gray-400 text-sm sm:text-base">
             </div>
 
-            {{-- Scoring Section --}}
+            {{-- Section Penilaian --}}
             <div class="space-y-3 sm:space-y-4">
                 <h3 class="text-base sm:text-lg font-bold section-title">Penilaian (Skor 0-7)</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">

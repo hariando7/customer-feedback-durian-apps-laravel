@@ -17,9 +17,9 @@
                 <div class="hidden lg:block w-32"></div>
             </div>
 
-            {{-- Stats Cards --}}
+            {{-- Cards Section --}}
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
-                {{-- Total Feedback Card --}}
+                {{-- Total Feedback --}}
                 <div
                     class="bg-white rounded-2xl p-6 sm:p-7 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-yellow-500">
                     <div class="flex items-center justify-between">
@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                {{-- Average Score Card --}}
+                {{-- Score --}}
                 <div
                     class="bg-white rounded-2xl p-6 sm:p-7 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-amber-500">
                     <div class="flex items-center justify-between">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
 
-                {{-- Highest Score Card --}}
+                {{-- Highest Score --}}
                 <div
                     class="bg-white rounded-2xl p-6 sm:p-7 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-orange-500 sm:col-span-2 lg:col-span-1">
                     <div class="flex items-center justify-between">
@@ -97,7 +97,7 @@
                 </div>
             @endif
 
-            {{-- Table Container --}}
+            {{-- Table Section --}}
             <div class="rounded-2xl overflow-hidden border border-yellow-200 shadow-2xl bg-white">
                 <div class="overflow-x-auto">
                     <table class="w-full divide-y divide-gray-200">
@@ -214,7 +214,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Mobile optimizations */
+        /* Mobile layout */
         @media (max-width: 640px) {
             table {
                 font-size: 0.875rem;
