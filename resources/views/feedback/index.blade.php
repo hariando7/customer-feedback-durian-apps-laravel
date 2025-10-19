@@ -119,6 +119,9 @@
                                     class="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs font-bold text-white uppercase tracking-wider hidden md:table-cell">
                                     Tanggal</th>
                                 <th
+                                    class="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs font-bold text-white uppercase tracking-wider hidden md:table-cell">
+                                    Update</th>
+                                <th
                                     class="px-3 sm:px-6 py-3 sm:py-4 text-center text-xs font-bold text-white uppercase tracking-wider">
                                     Aksi</th>
                             </tr>
@@ -151,6 +154,10 @@
                                     <td
                                         class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600 hidden md:table-cell">
                                         {{ $item->created_at->format('d M Y H:i') }}
+                                    </td>
+                                    <td
+                                        class="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600 hidden md:table-cell">
+                                        {{ $item->updated_at->format('d M Y H:i') }}
                                     </td>
                                     <td class="px-3 sm:px-6 py-3 sm:py-4 text-center">
                                         <a href="{{ route('feedback.show', $item->id) }}"

@@ -85,9 +85,24 @@
                                 </div>
                                 <label class="text-xs font-bold text-gray-600 uppercase tracking-wider">Tanggal</label>
                             </div>
-                            <p class="font-semibold text-gray-800 text-sm sm:text-base">
-                                {{ $feedback->created_at->format('d M Y') }}</p>
-                            <p class="text-xs sm:text-sm text-gray-600">{{ $feedback->created_at->format('H:i') }} WIB</p>
+                            <div class="justify-left flex gap-3">
+                                <div>
+                                    <p class="font-semibold text-gray-800 text-sm sm:text-base">Created</p>
+                                    <p class="font-semibold text-gray-800 text-sm sm:text-base">
+                                        {{ $feedback->created_at->format('d M Y') }}</p>
+                                    <p class="text-xs sm:text-sm text-gray-600">{{ $feedback->created_at->format('H:i') }}
+                                        WIB
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800 text-sm sm:text-base">Updated</p>
+                                    <p class="font-semibold text-gray-800 text-sm sm:text-base">
+                                        {{ $feedback->updated_at->format('d M Y') }}</p>
+                                    <p class="text-xs sm:text-sm text-gray-600">{{ $feedback->updated_at->format('H:i') }}
+                                        WIB
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         {{-- Catatan --}}
