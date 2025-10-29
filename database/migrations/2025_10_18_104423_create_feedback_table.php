@@ -11,13 +11,13 @@ class CreateFeedbackTable extends Migration
         Schema::create('feedback', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('panelist_name')->nullable();
-            $table->integer('color')->default(0); 
-            $table->integer('aroma')->default(0);
-            $table->integer('texture_creamy')->default(0);
-            $table->integer('texture_smooth')->default(0);
-            $table->integer('sweet')->default(0);
-            $table->integer('bitter')->default(0);
-            $table->integer('alcohol')->default(0);
+            $table->string('email')->nullable();
+            $table->string('no_wa')->nullable();
+            $table->integer('alkoholik')->default(0);
+            $table->integer('mengkal')->default(0);
+            $table->integer('tidak_masak')->default(0);
+            $table->integer('jumlah_juring')->default(0);
+            $table->integer('kemanisan')->default(0);
             $table->integer('total_score')->default(0);
             $table->text('note')->nullable();
             $table->string('photo')->nullable();

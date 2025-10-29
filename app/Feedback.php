@@ -10,12 +10,19 @@ class Feedback extends Model
 
     protected $fillable = [
         'panelist_name',
+        'email',
+        'no_wa',
         'qr_code',
-        'color','aroma','texture_creamy','texture_smooth',
-        'sweet','bitter','alcohol','total_score','note'
+        'alkoholik',
+        'mengkal',
+        'tidak_masak',
+        'jumlah_juring',
+        'kemanisan',
+        'total_score',
+        'note',
+        'photo',
     ];
 
-    // Relasi: satu feedback punya banyak foto
     public function photos()
     {
         return $this->hasMany(FeedbackPhoto::class);

@@ -17,40 +17,38 @@ class FeedbackController extends Controller
         // validasi
         $data = $request->validate([
             'panelist_name' => 'nullable|string|max:255',
-            'qr_code' => 'required|string|max:255',
-            'color' => 'required|integer|min:0|max:7',
-            'aroma' => 'required|integer|min:0|max:7',
-            'texture_creamy' => 'required|integer|min:0|max:7',
-            'texture_smooth' => 'required|integer|min:0|max:7',
-            'sweet' => 'required|integer|min:0|max:7',
-            'bitter' => 'required|integer|min:0|max:7',
-            'alcohol' => 'required|integer|min:0|max:7',
+            'email' => 'nullable|email|max:255', 
             'note' => 'nullable|string',
+            'qr_code' => 'required|string|max:255',
+            'alkoholik' => 'required|integer|min:0|max:7',
+            'mengkal' => 'required|integer|min:0|max:7',
+            'tidak_masak' => 'required|integer|min:0|max:7',
+            'jumlah_juring' => 'required|integer|min:0|max:7',
+            'kemanisan' => 'required|integer|min:0|max:7',
+            'no_wa' => 'nullable|string|max:255',
             'photos' => 'nullable|array',
         ]);
 
         // total score
         $data['total_score'] =
-            $data['color'] +
-            $data['aroma'] +
-            $data['texture_creamy'] +
-            $data['texture_smooth'] +
-            $data['sweet'] +
-            $data['bitter'] +
-            $data['alcohol'];
+            $data['alkoholik'] +
+            $data['mengkal'] +
+            $data['tidak_masak'] +
+            $data['jumlah_juring'] +
+            $data['kemanisan'];
 
         // Simpan/update berdasarkan QR Code
         $feedback = Feedback::updateOrCreate(
             ['qr_code' => $data['qr_code']],
             [
                 'panelist_name' => $data['panelist_name'] ?? null,
-                'color' => $data['color'],
-                'aroma' => $data['aroma'],
-                'texture_creamy' => $data['texture_creamy'],
-                'texture_smooth' => $data['texture_smooth'],
-                'sweet' => $data['sweet'],
-                'bitter' => $data['bitter'],
-                'alcohol' => $data['alcohol'],
+                'email' => $data['email'] ?? null, 
+                'no_wa' => $data['no_wa'] ?? null,
+                'alkoholik' => $data['alkoholik'],
+                'mengkal' => $data['mengkal'],
+                'tidak_masak' => $data['tidak_masak'],
+                'jumlah_juring' => $data['jumlah_juring'],
+                'kemanisan' => $data['kemanisan'],
                 'total_score' => $data['total_score'],
                 'note' => $data['note'] ?? null,
             ]

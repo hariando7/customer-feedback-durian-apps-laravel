@@ -4,11 +4,21 @@
     <div class="min-h-screen bg-gradient-to-br from-yellow-50 to-amber-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
             {{-- Back Button --}}
-            <a href="{{ route('feedback.index') }}"
-                class="inline-flex items-center gap-2 mb-6 sm:mb-8 px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 text-sm sm:text-base">
-                <span class="text-lg">←</span>
-                <span>Kembali</span>
-            </a>
+            <div class="flex justify-between">
+                <a href="{{ route('feedback.index') }}"
+                    class="inline-flex items-center gap-2 mb-6 sm:mb-8 px-4 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 text-sm sm:text-base">
+                    <span class="text-lg">←</span>
+                    <span>Kembali</span>
+                </a>
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit"
+                        class="inline-flex items-center gap-2 bg-gradient-to-r from-red-400 to-red-500 hover:from-red-500 hover:to-red-600 text-white font-semibold px-4 sm:px-5 py-2 sm:py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 text-sm sm:text-base">
+                        <span class="text-lg">😞</span>
+                        <span>Logout</span>
+                    </button>
+                </form>
+            </div>
 
             {{-- Page Title --}}
             <h1
@@ -126,13 +136,11 @@
                     {{-- Score Section --}}
                     @php
                         $scores = [
-                            'color' => 'Warna',
-                            'aroma' => 'Aroma',
-                            'texture_creamy' => 'Tekstur Creamy',
-                            'texture_smooth' => 'Tekstur Smooth',
-                            'sweet' => 'Manis',
-                            'bitter' => 'Pahit',
-                            'alcohol' => 'Alkohol',
+                            'alkoholik' => 'Alkoholik',
+                            'mengkal' => 'Mengkal',
+                            'tidak_masak' => 'Tidak Matang',
+                            'jumlah_juring' => 'Jumlah Juring',
+                            'kemanisan' => 'Kemanisan',
                         ];
                     @endphp
 
