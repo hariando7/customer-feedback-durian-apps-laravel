@@ -135,7 +135,7 @@
             {{-- Additional Info --}}
             <div class="text-center pb-4">
                 <p class="text-xs text-gray-500">
-                    © 2024 Sistem Feedback Panelis. All rights reserved.
+                    © 2025 Sistem Feedback Panelis. All rights reserved.
                 </p>
             </div>
         </div>
